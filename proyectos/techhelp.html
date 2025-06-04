@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHelp Express | Ficha Técnica</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0f2027;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .project-section {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 2rem;
+    }
+
+    .project-image {
+      flex: 1 1 300px;
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    }
+
+    .project-info {
+      flex: 2 1 500px;
+      min-width: 300px;
+    }
+
+    .project-info h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #00e5ff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-info ul {
+      list-style: none;
+      line-height: 1.8;
+      padding-left: 0;
+    }
+
+    .project-info h3 {
+      color: #00e5ff;
+      margin-top: 1.5rem;
+    }
+
+    .project-info p, .project-info li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .button-group {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .button-group a {
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      background: #00e5ff;
+      color: #001f2f;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+    }
+
+    .button-group a:hover {
+      background: #00bcd4;
+    }
+
+    @media (max-width: 768px) {
+      .project-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="project-section">
+
+    <!-- Imagen del proyecto -->
+    <div class="project-image">
+      <img src="/img/P3-portada.png" alt="TechHelp Express Portada">
+    </div>
+
+    <!-- Ficha técnica -->
+    <div class="project-info">
+      <h2>🛠 Ficha Técnica: <strong>TechHelp Express</strong></h2>
+
+      <ul>
+        <li><strong>📌 Proyecto:</strong> TechHelp Express</li>
+        <li><strong>🌐 Tipo:</strong> Sitio web de soporte técnico responsivo</li>
+        <li><strong>💻 Tecnologías:</strong> HTML5, CSS3, JavaScript (puro)</li>
+      </ul>
+
+      <h3>🔧 Descripción funcional</h3>
+      <p>
+        Plataforma web diseñada para ofrecer diagnóstico técnico rápido y claro. Permite al usuario conocer los servicios, entender el valor diferencial del soporte y enviar solicitudes personalizadas mediante un formulario interactivo.
+      </p>
+
+      <h3>✨ Características clave</h3>
+      <ul>
+        <li>✔️ Diseño adaptable a dispositivos móviles</li>
+        <li>✔️ Botón de acción con desplazamiento suave</li>
+        <li>✔️ Tarjetas de servicios visuales</li>
+        <li>✔️ Sección de valor agregado con argumentos persuasivos</li>
+        <li>✔️ Formulario validado con feedback inmediato</li>
+      </ul>
+
+      <h3>🎯 Objetivo</h3>
+      <p>
+        Brindar una experiencia profesional, directa y eficiente a usuarios que buscan soporte técnico moderno y personalizado.
+      </p>
+
+      <h3>🧑‍💻 Rol en el desarrollo</h3>
+      <p>
+        Diseño y desarrollo completo por <strong>Iker L. Reséndiz</strong>
+      </p>
+
+      <!-- Botones -->
+      <div class="button-group">
+        <a href="https://techhelpexpress.netlify.app/" target="_blank">🔗 Ver demo</a>
+        <a href="https://www.notion.so/TechHelp-Express-208bea08d2838036bcacdc659cceb7fa?source=copy_link" target="_blank">🗂 Ver más en Notion</a>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

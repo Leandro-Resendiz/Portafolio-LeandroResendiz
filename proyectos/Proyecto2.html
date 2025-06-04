@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 2 – Lead Sentinel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+
+<style>
+    :root {
+      --fondo: #0a0f2c;
+      --texto: #e0e0e0;
+      --acento: #4fc3f7;
+      --gris: #9ea7bd;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(180deg, #0a0f2c, #090c24);
+      color: var(--texto);
+      line-height: 1.8;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--acento);
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      color: var(--acento);
+      font-size: 1.8rem;
+    }
+    p, li {
+      color: var(--texto);
+      font-size: 1rem;
+    }
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 12px rgba(79,195,247,0.15);
+    }
+
+
+
+    .botones {
+        
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    
+    }
+    .botones a {
+      text-decoration: none;
+      color: var(--acento);
+      border: 1px solid var(--acento);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .botones a:hover {
+      background: var(--acento);
+      color: #0a0f2c;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Sync Hub</h1>
+    <p>Seguimiento Automatizado de Leads con Notion + Make</p>
+  </header>
+  <main>
+
+
+
+    <!--INICIO DE PROYECTO TECNICO-->
+
+    <section>
+      <h2>🔧 Descripción General</h2>
+      <p>Smart Sync Hub es una solución diseñada para dar seguimiento inteligente y automatizado a leads nuevos. Utiliza Notion como CRM central, Make para la lógica temporal, Hotmail para correos automáticos y Google Sheets como respaldo externo. El sistema reduce tareas manuales, mejora el control de embudo de ventas y registra toda la evidencia de contacto.</p>
+    </section>
+
+    <section>
+      <h2>🧩 Flujo Detallado</h2>
+      <ul>
+        <li>1. Formulario lleno → Captura de datos.</li>
+        <li>2. Registro en Notion → Lead guardado automáticamente.</li>
+        <li>3. Correo de bienvenida (Día 0) → Enviado desde Hotmail.</li>
+        <li>4. Respaldo paralelo en Google Sheets.</li>
+        <li>5. Día 2 → Si el estado sigue como "Nuevo", se envía correo de seguimiento + nota en Notion.</li>
+        <li>6. Día 3 → Si sigue sin respuesta, se envía un segundo correo, se cambia el estado a "En espera" y se actualiza la fecha de último contacto.</li>
+      </ul>
+      <img src="img/formulario-lead.jpg" alt="Formulario inicial">
+      <img src="img/flujo-make.jpg" alt="Flujo Make de seguimiento">
+      <img src="img/notion-crm.jpg" alt="CRM Notion actualizado">
+      <img src="img/google-sheets.jpg" alt="Respaldo en Google Sheets">
+    </section>
+
+    <section>
+      <h2>🛠️ Herramientas Utilizadas</h2>
+      <ul>
+        <li>Notion – Base CRM principal.</li>
+        <li>Make (Integromat) – Automatización y lógica condicional por tiempo.</li>
+        <li>Hotmail vía SMTP – Correos automáticos.</li>
+        <li>Google Sheets – Respaldo externo sincronizado.</li>
+        <li>Formulario web – Entrada de datos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🎯 Resultados</h2>
+      <p>El flujo automatizado proporciona seguimiento estructurado y puntual, reduce las tareas manuales, mejora el control sobre el proceso comercial y fortalece la calidad de la base de datos. Además, permite auditar cada contacto gracias a notas automáticas generadas en Notion.</p>
+    </section>
+
+
+
+
+    <section class="botones">
+      <a href="#">Ver en Notion</a>
+      <a href="/index.html">Volver Portafolio</a>
+    </section>
+
+  </main>
+</body>
+
+
+
+
+</html>

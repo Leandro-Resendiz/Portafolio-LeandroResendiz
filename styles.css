@@ -1,0 +1,632 @@
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(120deg, #0d0d0d, #1a1a2e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      animation: fadeIn 2s ease-in;
+    }
+    header img {
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #00f5ff;
+      object-fit:contain;
+      background-size: 400% 400%;
+      animation: fondoAnimado 15s ease infinite;
+    }
+
+    @keyframes fondoAnimado{
+    0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.6), 
+      0 0 40px rgba(255, 0, 255, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.8), 
+      0 0 60px rgba(255, 0, 255, 0.4);
+  }
+
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #00f5ff;
+      margin-bottom: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    section {
+      padding: 3rem 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      
+    }
+
+  
+    .card {
+      perspective: 1000px;
+      text-align: center;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #00f5ff;
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-front {
+      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    }
+    .card-back {
+      background: #111;
+      transform: rotateY(180deg);
+      font-size: 14px;
+      
+    }
+
+    .expeditions{
+      font-family:sans-serif
+    }
+    .projects, .contact, .mystery {
+      text-align: center;
+    }
+    .projects article, .contact .card {
+      background: #222;
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00f5ff33;
+    }
+    .download-btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #00f5ff;
+      color: #00f5ff;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+
+
+    /*inicio proyectos*/
+
+
+    /* fin proyectos*/
+
+
+    /*inicio que puedo hacer*/
+
+     .mission-panel {
+
+      width: 35rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #00f7ff55;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #00f7ff33, 0 0 60px #5500ff11;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 2s ease-out;
+  overflow: hidden;
+}
+
+::before para flujo de energía 
+.mission-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #00f7ff 40%,
+    #00f7ff 60%,
+    transparent 100%
+  );
+  animation: energyFlow 2s linear infinite;
+  opacity: 0.7;
+}
+
+/* Animación del flujo */
+@keyframes energyFlow {
+  0% {
+    background-position: 0% -100%;
+  }
+  100% {
+    background-position: 0% 200%;
+  }
+}
+
+.mission-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #00f7ff;
+  text-shadow: 0 0 8px #00f7ffaa;
+  margin-bottom: 1.5rem;
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mission-list li {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00f7ff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.mission-list li:hover {
+  background: rgba(0, 247, 255, 0.1);
+}
+
+.icon {
+  margin-right: 0.8rem;
+  font-size: 1.4rem;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px #00f7ffaa, 0 0 16px #00f7ff44;
+  }
+  50% {
+    text-shadow: 0 0 12px #00f7ffcc, 0 0 24px #00f7ff66;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    /*fin que puedo hacer*/
+
+
+
+
+
+    .mystery {
+      position: relative;
+      padding: 5rem 2rem;
+    }
+    .orb {
+      width: 200px;
+      height: 200px;
+      margin: 3rem auto;
+      perspective: 1000px;
+    }
+    .cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCube 8s infinite linear;
+    }
+    .face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .front  { transform: translateZ(100px); background: linear-gradient(45deg, #00f5ff, #ff00f5); }
+    .back   { transform: rotateY(180deg) translateZ(100px); background: linear-gradient(45deg, #ff8c00, #8a2be2); }
+    .right  { transform: rotateY(90deg) translateZ(100px); background: linear-gradient(45deg, #00ff00, #00ffff); }
+    .left   { transform: rotateY(-90deg) translateZ(100px); background: linear-gradient(45deg, #ff0000, #ffff00); }
+    .top    { transform: rotateX(90deg) translateZ(100px); background: linear-gradient(45deg, #ff69b4, #1e90ff); }
+    .bottom { transform: rotateX(-90deg) translateZ(100px); background: linear-gradient(45deg, #00ffcc, #ff33cc); }
+
+    @keyframes rotateCube {
+      from { transform: rotateX(0deg) rotateY(0deg); }
+      to { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header img {
+        position: static;
+        margin-top: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    a { color: #00f5ff; text-decoration: none; }
+  
+
+
+    /* inicio de habilidades   vvv
+
+      /* ===== SECCIÓN DE HABILIDADES (Circuito) ===== */
+  .skills-circuit {
+    position: relative;
+    padding: 80px 20px 100px;
+    overflow: visible;
+    margin-top: 60px;
+    background: radial-gradient(circle at center, #00111a 0%, #000022 90%);
+    border-radius: 15px;
+    box-shadow: 0 0 50px #00e5ff55;
+  }
+
+  .skills-circuit::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 100s linear infinite;
+    opacity: 0.15;
+    z-index: 0;
+    border-radius: 15px;
+  }
+
+  .skills-circuit h2.neon-title {
+    font-size: 2.8em;
+    text-shadow: 0 0 10px #00e5ff, 0 0 25px #00e5ff;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .intro{
+    text-align: center;
+  }
+
+  .skills-circuit p.intro {
+    color: #80deea;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .lines-svg {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .lines-svg line {
+    stroke: rgba(0, 229, 255, 0.4);
+    stroke-width: 2;
+    stroke-dasharray: 4 6;
+    animation: dashmove 4s linear infinite;
+  }
+  @keyframes dashmove {
+    to {
+      stroke-dashoffset: -1000;
+    }
+  }
+
+  .circuit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
+    transition: transform 0.3s ease;
+  }
+  .node.delay1 { animation-delay: 0.2s; }
+  .node.delay2 { animation-delay: 0.4s; }
+  .node.delay3 { animation-delay: 0.6s; }
+  .node.delay4 { animation-delay: 0.8s; }
+  .node.delay5 { animation-delay: 1s; }
+  .node.delay6 { animation-delay: 1.2s; }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(0, 229, 255, 0.1);
+    border: 2px solid #00e5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,229,255,0.6), inset 0 0 10px rgba(0,229,255,0.3);
+    animation: pulseGlow 3s ease-in-out infinite;
+    cursor: default;
+  }
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow:
+        0 0 20px rgba(0,229,255,0.6),
+        inset 0 0 10px rgba(0,229,255,0.3);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow:
+        0 0 35px rgba(0,229,255,1),
+        inset 0 0 20px rgba(0,229,255,0.6);
+      transform: scale(1.05);
+    }
+  }
+  .node:hover {
+    transform: scale(1.15);
+    z-index: 5;
+  }
+  .node:hover .circle {
+    box-shadow:
+      0 0 50px #00e5ff,
+      0 0 60px #00e5ff,
+      inset 0 0 30px #00e5ff;
+    animation-play-state: paused;
+  }
+
+  .skills-circuit.visible .node {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes moveStars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 1000px;
+    }
+  }
+
+  /* ===== SECCIÓN PROYECTOS (Expediciones) ===== */
+  .expeditions {
+    margin-top: 100px;
+    text-align:left;
+    
+  }
+
+
+  .expeditions h2 {
+    font-size: 2.6em;
+    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 20px #00e5ff;
+    text-align:center;
+;
+  }
+  .expedition-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .expedition {
+    background: rgba(0, 229, 255, 0.1);
+    border: 2px solid #00e5ff;
+    border-radius: 15px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 15px #00e5ff55;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .expedition:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 35px #00e5ffaa;
+  }
+  .expedition h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .expedition p {
+    font-size: 0.95em;
+    color: #a0e5ff;
+  }
+  .expedition small {
+    color: #52c5fa;
+    
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .circuit-grid {
+      gap: 25px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .expedition-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+  
+  .planets-3d {
+    margin: 60px auto;
+    max-width: 900px;
+    text-align: center;
+    color: #00dfff;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .planets-3d h2 {
+    font-size: 2.6em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px #00e5ff;
+  }
+  .planet-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  .planet-3d {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #0077aa, #002233);
+    box-shadow: 
+      0 0 20px #00bfff,
+      inset 0 0 40px #0099cc;
+    position: relative;
+    animation: rotateY 5s linear infinite;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    outline: none;
+  }
+  .planet-3d:hover,
+  .planet-3d:focus {
+    animation-play-state: paused;
+    transform: scale(1.15) rotateY(15deg);
+    box-shadow: 
+      0 0 60px #00e5ff,
+      inset 0 0 50px #00ccff;
+  }
+  .glow {
+    position: absolute;
+    top: 15px; left: 15px;
+    width: 170px; height: 170px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,229,255,0.3) 0%, transparent 70%);
+    filter: blur(10px);
+    pointer-events: none;
+  }
+
+  .notion{
+    fill: white;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 20px;
+    width: 85%;
+    margin: 0 7.5%;
+    color: #a0e5ff;
+    text-shadow: 0 0 6px #00e5ff;
+  }
+  .info h3 {
+    margin: 0 0 6px;
+    font-size: 1.3em;
+  }
+  .info p {
+    font-size: 0.95em;
+    margin: 0 0 8px;
+    color: #80d0ffcc;
+  }
+  .info small {
+    font-size: 0.8em;
+    color: #40c4ff;
+  }
+
+  @keyframes rotateY {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .planet-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+
+

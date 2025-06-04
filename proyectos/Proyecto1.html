@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 1 – Welcome AutoPilot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fondo: #0a0f2c;
+      --texto: #e0e0e0;
+      --acento: #4fc3f7;
+      --gris: #9ea7bd;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(180deg, #0a0f2c, #090c24);
+      color: var(--texto);
+      line-height: 1.8;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--acento);
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      color: var(--acento);
+      font-size: 1.8rem;
+    }
+    p, li {
+      color: var(--texto);
+      font-size: 1rem;
+    }
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+
+    .imgt{
+      text-align: center;
+      align-content: center;
+    }
+    .img2 {
+      width: 40%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 12px rgba(79,195,247,0.15);
+    }
+
+.img1 {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 12px rgba(79,195,247,0.15);
+    }
+
+    .botones {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .botones a {
+      text-decoration: none;
+      color: var(--acento);
+      border: 1px solid var(--acento);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .botones a:hover {
+      background: var(--acento);
+      color: #0a0f2c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proyecto 1: Welcome AutoPilot</h1>
+    <p>Registro inteligente de clientes con Airtable + WhatsApp</p>
+  </header>
+  <main>
+    <section>
+      <h2>🔧 Descripción General</h2>
+      <p>Welcome AutoPilot es una solución automatizada diseñada para optimizar la recepción de nuevos clientes. Integra un formulario web, una base de datos en Airtable y una alerta instantánea vía WhatsApp. Todo el proceso sucede en tiempo real, facilitando la gestión inmediata y organizada de leads.</p>
+    </section><section>
+  <h2>🚨 Problema Identificado</h2>
+  <p>Muchos procesos de captación de clientes sufren de retrasos, duplicación de datos o pérdida de oportunidades por la falta de respuesta inmediata. Este proyecto resuelve esas ineficiencias mediante automatización completa desde el primer contacto.</p>
+</section>
+
+<section>
+  <h2>🧠 Solución Técnica Aplicada</h2>
+  <ul>
+    <li>El usuario llena un formulario web con sus datos.</li>
+    <li>Make conecta el formulario con una base de datos en Airtable, registrando automáticamente la entrada.</li>
+    <li>Simultáneamente, Make dispara una notificación de WhatsApp al equipo de atención indicando que hay un nuevo lead.</li>
+  </ul>
+  <div class="imgt">
+  <img class="img1" src="/img/diagramaP1.jpg" alt="diagrama">
+  <img class="img2" src="/img/p1-4.jpg.png" alt="Alerta automática por WhatsApp" width="230px" height="auto">
+  </div>
+</section>
+
+<section>
+  <h2>💡 Funcionalidades Técnicas Destacadas</h2>
+  <ul>
+    <li>Formulario responsivo y accesible desde cualquier dispositivo.</li>
+    <li>Base de datos en Airtable integrada y escalable.</li>
+    <li>Notificación inmediata y automatizada vía WhatsApp.</li>
+    <li>Sincronización en tiempo real y reducción del tiempo de respuesta.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🎯 Resultados Obtenidos</h2>
+  <p>La automatización logró una reducción de más del 80% en el tiempo de respuesta al cliente, mejor organización en la base de datos, y una base técnica para integraciones futuras como dashboards, analytics o sistemas de CRM ampliados.</p>
+</section>
+
+<section class="botones">
+  <a href="https://www.notion.so/Welcome-AutoPilot-Proyecto-1-206bea08d28380838059c12431f1929f?source=copy_link">Ver en Notion</a>
+  <a href="/proyectos/Demo.html">Ver demo</a>
+  <a href="/index.html">Volver a Portafolio</a>
+</section>
+
+  </main>
+</body>
+</html>
