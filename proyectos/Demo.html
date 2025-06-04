@@ -1,239 +1,196 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ciudadanía Uraniana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro Ciudadano de Urano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      height: 100vh;
-      background: #000;
-      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-    }
-
-    /* Partículas tipo estrellas */
-    .particles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .particle {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: fly 5s linear infinite;
-    }
-
-    @keyframes fly {
-      0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.5);
-        opacity: 0;
-      }
-    }
-
-    .main-title {
-      position: relative;
-      z-index: 1;
-      color: #4fc3f7;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .instructions {
-      margin-top: -.5rem;
-      position: relative;
-      z-index: 1;
-      color: #b3dfff;
-      max-width: 950px;
-      text-align: center;
-      font-size: 1em;
-      margin-bottom: 20px;
-      padding: 0 20px;
-    }
-
-
-       .instructions2{
-      margin-top: .4rem;
-      position: relative;
-      z-index: 1;
-      color: #b3dfff;
-      max-width: 950px;
-      text-align: center;
-      font-size: .7em;
-      margin-bottom: 20px;
-      padding: 0 20px;
-    }
-
-    .instructions p{
-      font-size: 14px;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      background: rgba(18, 24, 50, 0.9);
-      border: 1px solid #4fc3f7;
-      border-radius: 16px;
-      padding: 40px;
-      max-width: 400px;
-      width: 90%;
-      box-shadow: 0 0 25px #4fc3f7;
+      align-items: center;
+      padding: 2rem;
     }
 
     h1 {
-      font-size: 1.5em;
-      margin-bottom: 20px;
-      color: #4fc3f7;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       text-align: center;
+      color: #8ec5fc;
+      animation: glow 2s ease-in-out infinite alternate;
     }
 
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 0.9em;
-      color: #d0eaff;
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #8ec5fc, 0 0 20px #4facfe;
+      }
+      to {
+        text-shadow: 0 0 20px #8ec5fc, 0 0 30px #4facfe;
+      }
+    }
+
+    .glow-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(142, 197, 252, 0.4);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      text-align: center;
+      backdrop-filter: blur(5px);
+      width: 90%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 500px;
     }
 
     input[type="text"],
     input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #4fc3f7;
+      padding: 0.8rem;
       border-radius: 8px;
-      background-color: #10152f;
-      color: #ffffff;
-      margin-bottom: 20px;
-      font-size: 1em;
-    }
-
-    input::placeholder {
-      color: #7eaed9;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #4fc3f7;
-      color: #000;
       border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      outline: none;
+      font-size: 1rem;
     }
 
-    button:hover {
-      background-color: #29b6f6;
+    input[type="submit"] {
+      padding: 1rem;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-top: 1rem;
+    }
+
+    .explanation {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .glow-box {
+        padding: 1rem;
+      }
+
+      form {
+        max-width: 100%;
+      }
+
+      input[type="submit"] {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Partículas animadas -->
-  <div class="particles">
-    <script>
-      for (let i = 0; i < 60; i++) {
-        const star = document.createElement("div");
-        star.classList.add("particle");
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDuration = `${2 + Math.random() * 4}s`;
-        star.style.opacity = `${0.3 + Math.random() * 0.7}`;
-        document.querySelector(".particles").appendChild(star);
-      }
-    </script>
-  </div>
-
-  <!-- Título Principal -->
-  <div class="main-title">🪐 Programa de Ciudadanía Interplanetaria: Urano</div>
-
-  <!-- Instrucciones -->
-  <div class="instructions">
-    
-<p class="imp"> No necesitas ingresar tu nombre real. Puedes usar un alias, iniciales o incluso un emogi.
-  Solo se necesita un correo electrónico  válido para que veas como funciona el flujo completo.
-
   
-</p>
+  <div class="glow-box explanation">
+    <strong>🚀 Nota sobre esta demostración:</strong><br>
+    Este demo difiere del proyecto descrito en la ficha técnica.  
+    En lugar de enviar una alerta privada al propietario, aquí optamos por enviar un mensaje de bienvenida automatizado directamente al usuario.  
+    ¿Por qué? Porque así podrás vivir y apreciar la automatización desde tu propia experiencia, reforzando la conexión inmediata con el sistema.  
+    Esto mejora la usabilidad y demuestra de forma tangible el valor real del flujo automatizado.
+  </div>
+  
+  
+  <h1> 🪐 Programa de ciudadania de Urano </h1>
 
-</div>
-
-  <!-- Contenedor del formulario -->
-  <div class="container">
-    <h1>Solicita tu Ciudadanía</h1>
-    <form id="uranusForm">
-      <label for="name">Nombre completo:</label>
-      <input type="text" id="name" name="name" placeholder="Tu nombre galáctico" required>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" placeholder="ejemplo@urano.com" required>
-
-      <button type="submit">Solicitar Ciudadanía</button>
-    </form>
+  <div class="glow-box explanation">
+    <strong>👽 Bienvenido/a a Urano:</strong><br>
+    Nos honra tu llegada desde los confines del sistema solar.  
+    Convertirte en ciudadano de Urano no es solo un registro…  
+    Es un salto cuántico hacia una comunidad de mentes brillantes, rebeldes y visionarias.  
+    Al unirte, formas parte de una red intergaláctica donde la imaginación se automatiza, y las ideas viajan a la velocidad del pensamiento.  
+    <br><br>
+    🛸 <strong>¡Gracias por atreverte a cruzar la atmósfera!</strong>  
+    Tu pasaporte cósmico te será entregado con un mensaje automatizado de bienvenida en breve.
   </div>
 
 
-
-
-  <div class="instructions2">
-    He creado este Proyecto diferente de ejemplo (no real).
-
-  <p>
-La automatización detecta cuando se registra un nuevo contacto se envía automaticamente un mensaje de bienvenida personalizado. 
-</p>
-<p>
-  🔒Protegemos tu identidad. Este entorno no recolecta datos con fines comerciales. Tu participacion solo activa la automatización como una muestra tecnica.
-</p>
-
-</div>
-
-
-
-
+  <form action="https://hook.us2.make.com/mjffabz3yu7i85dz53alq8ofj9qovjvh" method="POST" class="glow-box">
+    <input type="text" name="nombre" placeholder="🧑 Tu nombre" required />
+    <input type="email" name="correo" placeholder="📧 Tu correo electrónico" required />
+    <input type="submit" value="¡Unirme a Urano!" />
+    <p class="disclaimer">
+      Al enviar este formulario, aceptas que tus datos serán tratados con confidencialidad y exclusivamente para fines relacionados con tu bienvenida digital a Urano.  
+      No se comparten con terceros, y puedes solicitar su eliminación en cualquier momento.  
+      Tu privacidad es tan valiosa como el oxígeno en una caminata espacial. ?
+    </p>
+  </form>
 
   <script>
-    document.getElementById('uranusForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
+    const form = document.querySelector('form');
+    const successMessage = document.createElement('p');
+    successMessage.style.color = '#4caf50';
+    successMessage.style.fontWeight = 'bold';
+    successMessage.style.marginTop = '1rem';
 
-      const data = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value
-      };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // Evita recargar la página
 
-      await fetch('https://hook.us2.make.com/mjffabz3yu7i85dz53alq8ofj9qovjvh', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
+      // Borra mensajes previos
+      if (form.contains(successMessage)) {
+        form.removeChild(successMessage);
+      }
 
-      alert('¡Gracias por registrarte, futuro ciudadano de Urano!');
+      const formData = new FormData(form);
+      const url = form.action;
+
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors' // porque probablemente es un webhook externo
+        });
+
+        // Mostrar mensaje de éxito aunque no haya respuesta explícita (debido a no-cors)
+        form.appendChild(successMessage);
+        successMessage.textContent = '✅ ¡Registro exitoso! Bienvenido a Urano.';
+
+        form.reset();
+
+      } catch (error) {
+        successMessage.style.color = '#f44336';
+        successMessage.textContent = '❌ Hubo un error al enviar tus datos. Por favor intenta más tarde.';
+        form.appendChild(successMessage);
+      }
     });
   </script>
+
 </body>
 </html>

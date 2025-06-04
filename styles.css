@@ -245,6 +245,14 @@
   }
 }
 
+
+ @media screen and (max-width: 768px) {
+  .mission-panel{
+    width: 24.5rem;
+  }
+ }
+
+
     /*fin que puedo hacer*/
 
 
@@ -605,6 +613,12 @@
     font-size: 0.95em;
     margin: 0 0 8px;
     color: #80d0ffcc;
+  }
+
+  .wts img{
+    width: 20px;
+    height: 20px;
+
   }
   .info small {
     font-size: 0.8em;
